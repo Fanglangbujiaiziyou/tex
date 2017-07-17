@@ -1,0 +1,41 @@
+class Person {
+    constructor(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    introduce(str1) {
+        var str1 = "My name is Tomm.I am 21 years old.";
+        return str1;
+    }
+}
+class Student extends Person{
+    constructor(name,age,kclass){
+        super(name,age);
+        this.kclass=kclass;
+    }
+    introduce(str2,basic2){
+        var str2="I am a Student. I am at Class 2.";
+        var person=new Person();
+        var basic2=person.introduce();
+        return basic2+str2;
+    }
+}
+class Teacher extends Person{
+    constructor(name,age,kclass){
+        super(name,age);
+        this.kclass=kclass;
+    }
+    introduce(str3,basic3){
+        var str3=" I am a Teacher.I teach Class 2. ";
+        var str33=" I am a Teacher.I teach no Class .";
+        var person2=new Person();
+        var basic3=person2.introduce();
+        if(kclass!=null){
+        return basic3+str3;}
+        else {
+            return basic3+str33;}
+
+    }
+}
