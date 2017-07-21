@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+        <script src="./jquery-3.2.1.js"></script>        
+        <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+        <style>
+            p {font-size:14px;}
+
+
+        </style>
+    </head>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">FRUITS</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">NEW <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">HOT</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">All Fruits <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Apple</a></li>
+                            <li><a href="#">Orange</a></li>
+                            <li><a href="#">Cherry</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Grape</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Strawberry</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="/i/eg_tulip.jpg"  alt=>
+                <div class="container">
+                <div class="carousel-caption">
+
+                </div>
+                </div>
+            </div>
+            <div class="item">
+
+                <div class="carousel-caption">
+                    ...
+                </div>
+            </div>
+            ...
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <div class="jumbotron">
+            <h1>Hello, world!</h1>
+            <p>...</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
+    </div>
+
+
+        <div class="row">
+    <div class="col-md-4">
+    <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="data:image/png;base64,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">
+    <h2>HOME</h2>
+    <P>Donec sed odio dui. Etiam porta sem malesuada magna <br>mollis euismod. Nullam id dolor id nibh ultricies<br>
+        vehicula ut id elit. Morbi leo risus, porta ac <br>consectetur ac, vestibulum at eros. Praesent commodo<br>
+        cursus magna, vel scelerisque nisl consectetur et.</P>
+        <button class="btn btn-default" type="submit">view>></button>
+        </div>
+    <div class="col-md-4">
+        <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="data:image/png;base64,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">
+        <h2>ABOUT</h2>
+        <P>Donec sed odio dui. Etiam porta sem malesuada magna <br>mollis euismod. Nullam id dolor id nibh ultricies<br>
+            vehicula ut id elit. Morbi leo risus, porta ac <br>consectetur ac, vestibulum at eros. Praesent commodo<br>
+            cursus magna, vel scelerisque nisl consectetur et.</P>
+        <button class="btn btn-default" type="submit">view>></button>
+    </div>
+    <div class="col-md-4">
+        <img class="img-circle" data-src="holder.js/140x140" alt="140x140" style="width: 140px; height: 140px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAGa0lEQVR4Xu2Y60tUYRCHx+5lGVFkZCRSSppIFkZX6j9PKCWvFaFiZhe7a0lKSWVl/F44sboQzqfZiWchXN05Z6ZnHuedY9Py8vKG8YLANgk0Icw2SRFWCCAMIrgIIIwLF8EIgwMuAgjjwkUwwuCAiwDCuHARjDA44CKAMC5cBCMMDrgIIIwLF8EIgwMuAgjjwkUwwuCAiwDCuHARjDA44CKAMC5cBCMMDrgIIIwLF8EIgwMuAgjjwkUwwuCAiwDCuHARjDA44CKAMC5cBCMMDrgIIIwLF8EIgwMuAgjjwkUwwuCAiwDCuHARjDA44CKAMC5cBCMMDrgIIIwLF8EIgwMuAgjjwkUwwuCAiwDCuHARjDA44CKAMC5cBCMMDrgIIIwLF8EIgwMuAgjjwkUwwuCAiwDCuHARjDA44CKAMC5cBCMMDrgIIIwLF8EIgwMuAgjjwkUwwuCAiwDCuHARjDA44CKAMC5cBCMMDrgIIIwLF8EIgwMuAgjjwkUwwuCAiwDCuHARjDA44CKQXpiVlRWbmpqytbU1u3z5srW0tGwC8PbtW5uenrbDhw/bwMBA+WxpacmePn1q379/Lz/v6emxvXv3/hPc79+/yzULCwt27Ngxu3DhQl288ihfR0eHnTlzpnz+/Plze/36ten648eP27lz56ypqcnVpEYKTi3Mp0+f7NGjR7Z//377+vVrnTDr6+t2//5909dDhw4VYfR+aGioXKMGqqESoK+v7599GRsbsx8/fti3b9/s6NGjdcJI3ImJiSJGJYzqe/DgQcmzZ8+eIo6EOXXqVCM54KoltTCaFLt27bLV1VWbm5urE+bJkyf2+fNn29jYsB07dhRhPnz4YI8fPy4NlyiaCu/fv7fbt2/bw4cPy72uXbtW7jsyMlJganK9ePHC2tvb7e7du3bkyJE6YUZHR+3gwYObJszMzIy9efOm3Fv3u3fvnh04cMAuXrzoalIjBacWpgL58uXLOmE0cdTwS5cumRq3c+fOIowmyvz8vF29etWam5vt2bNn5d/169fL7TSRWltby2eSUNfo2Kped+7cqRNGUuieEktSVBNmcnKyTL6bN2+WyzWBdHRW3zeSCNut5b8VRkeBjoHz588XCSphtIdoWkgQHUt6r59duXKlTIhXr17Z7OxsiW9ra7Ourq5NLLcK8/PnTxseHrazZ8+Wo2dwcPCvMDrGtCfduHGj3EM1aYLdunVru/1puLj/UpjFxcWyCOs3XsusGicBdBRIiNoJo/eaOpVAEkDHzq9fv/5KVNu1rcLo2FteXi6TTNdowpw+fbosvdqvaifM+Ph42YEqgRrOhm0U9F8KoybqaWbrSxNFk6B2h9H7jx8/lj1DTy+6Vk862jl0LPX39/9zwmh6ffnypS7XyZMny96kRbfaYSSiptjWe26jTw0TkloYNUq/wWr4u3fvrLOz0/bt21caraeh6qXFVs3T47M+0xSofUrSzqKjS086mkaSSp9LJl2j5mtZ1kuTS03XAqwFVgu1Jote+qrF+cSJE+VY0lOV9hYdVbt37y4LcHW/hjHAWUhqYaqFdev/WUtl7d9VancYxepxV5Ok+jtMb29vObK0JEsA7TMSTM2WlPpe02HrSztOd3f33x/rOKvdYfSBdiQdg7qvRJLU/B3GaSnheQmknjB5seetHGHy9i6kcoQJwZ43KcLk7V1I5QgTgj1vUoTJ27uQyhEmBHvepAiTt3chlSNMCPa8SREmb+9CKkeYEOx5kyJM3t6FVI4wIdjzJkWYvL0LqRxhQrDnTYoweXsXUjnChGDPmxRh8vYupHKECcGeNynC5O1dSOUIE4I9b1KEydu7kMoRJgR73qQIk7d3IZUjTAj2vEkRJm/vQipHmBDseZMiTN7ehVSOMCHY8yZFmLy9C6kcYUKw502KMHl7F1I5woRgz5sUYfL2LqRyhAnBnjcpwuTtXUjlCBOCPW9ShMnbu5DKESYEe96kCJO3dyGVI0wI9rxJESZv70IqR5gQ7HmTIkze3oVUjjAh2PMmRZi8vQupHGFCsOdNijB5exdSOcKEYM+bFGHy9i6kcoQJwZ43KcLk7V1I5QgTgj1vUoTJ27uQyhEmBHvepAiTt3chlSNMCPa8SREmb+9CKkeYEOx5kyJM3t6FVI4wIdjzJkWYvL0LqRxhQrDnTYoweXsXUjnChGDPm/QPMcT4pm5Nc+wAAAAASUVORK5CYII=">
+        <h2>CONTACT</h2>
+        <P>Donec sed odio dui. Etiam porta sem malesuada magna <br>mollis euismod. Nullam id dolor id nibh ultricies<br>
+            vehicula ut id elit. Morbi leo risus, porta ac <br>consectetur ac, vestibulum at eros. Praesent commodo<br>
+            cursus magna, vel scelerisque nisl consectetur et.</P>
+        <button class="btn btn-default" type="submit">view>></button>
+    </div>
+        </div>
+    </body>
+</html>
