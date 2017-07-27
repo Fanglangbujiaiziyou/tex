@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>桂子山女子学院官网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        localStorage.setItem("2015101","张名 2015101 汉族 1 90 78 82");
+        localStorage.setItem("2015102","王谢 2015102 藏族 1 79 88 82");
+        localStorage.setItem("2015103","李想 2015103 苗族 2 89 88 83");
+        localStorage.setItem("2015104","赵聪 2015104 汉族 3 93 81 74");
+
+        function submitFun(obj) {
+
+            var regex = /^[\u4e00-\u9fa5]+\s\d{7}\s[\u4e00-\u9fa5]+\s\d+(\s\d+)+$/;
+            if (regex.test(obj.category.value)) {
+                alert("学生成绩已添加");
+                var arr = obj.category.value.split(" ");
+                localStorage.setItem(arr[1],arr);
+            }
+            else {
+                alert("请按正确的格式输入（格式：姓名 学号 民族 班级 成绩）。");
+            }
+        }
+
+        function checkFun(id){
+            for(var i = localStorage.length - 1; i >= 0; i--){
+                if(id.check.value===localStorage.key(i)){
+                    alert("学号为"+localStorage.key(i) +"的成绩信息为："+ localStorage.getItem(localStorage.key(i)));
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+
+
+        function reviseFun(infor){
+            for(var i = localStorage.length - 1; i >= 0; i--){
+                if(infor.revise.value===localStorage.key(i)) {
+                    alert("学号为"+localStorage.key(i) +"的成绩信息为："+ localStorage.getItem(localStorage.key(i)));
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+        function deleteFun(de){
+            for(var i = localStorage.length - 1; i >= 0; i--){
+                if(de.delete.value===localStorage.key(i)) {
+                    alert("学号为" + localStorage.key(i) + "的成绩信息为已删除");
+                    localStorage.removeItem(localStorage.key(i));
+                }
+                else{
+                    continue;
+                }
+            }
+        }
+
+    </script>
+
+    <style>
+        p {font-size:14px;}
+    </style>
+</head>
+<body>
+ <div class="container">
+    <div align="center">
+        <h2>15级信管成绩信息</h2>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>学号</th>
+            <th>民族</th>
+            <th>班级</th>
+            <th>英语</th>
+            <th>语文</th>
+            <th>数学</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>张名</td>
+            <td>2015101</td>
+            <td>汉族</td>
+            <td>1</td>
+            <td>90</td>
+            <td>78</td>
+            <td>82</td>
+        </tr>
+        <tr>
+            <td>王谢</td>
+            <td>2015102</td>
+            <td>藏族</td>
+            <td>2</td>
+            <td>79</td>
+            <td>88</td>
+            <td>82</td>
+        </tr>
+        <tr>
+            <td>李想</td>
+            <td>2015103</td>
+            <td>苗族</td>
+            <td>3</td>
+            <td>89</td>
+            <td>88</td>
+            <td>83</td>
+        </tr>
+        <tr>
+            <td>赵聪</td>
+            <td>2015104</td>
+            <td>汉族</td>
+            <td>4</td>
+            <td>93</td>
+            <td>81</td>
+            <td>74</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+ <div align="center">
+<form onsubmit="return submitFun(this);">
+    <input type="text" name="category" />
+    <input type="submit" name="submit" value="提交"/>
+</form>
+<p>请输入学生信息（格式：姓名 学号 民族 班级 学科 成绩）并提交：<br></p>
+
+
+<form onsubmit="return checkFun(this);">
+    <input type="text" name="check" />
+    <input type="submit" name="submit" value="查询"/>
+</form>
+<p>请按正确的格式输入要查询学生的学号（格式： 学号, 学号,…）：<br></p>
+
+ <form onsubmit="return reviseFun(this);">
+     <input type="text" name="revise" />
+     <input type="submit" name="submit" value="修改"/>
+ </form>
+ <p>请输入学号修改相关成绩信息</p>
+ <form onsubmit="return deleteFun(this);">
+     <input type="text" name="delete" />
+     <input type="submit" name="submit" value="删除"/>
+ </form>
+<p>请输入学号删除相关成绩信息</p>
+ </div>
+
+
+</body>
+</html>
